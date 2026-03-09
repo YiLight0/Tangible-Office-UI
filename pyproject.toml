@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openclaw-toio-crayfish"
+version = "0.1.0"
+description = "OpenClaw toio office-crayfish behavior runtime"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "OpenClaw Contributors" }]
+dependencies = [
+  "toio.py==1.1.0",
+  "pynput>=1.7.6",
+]
+
+[tool.setuptools]
+packages = ["toio_app", "scripts"]
