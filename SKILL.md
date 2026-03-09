@@ -9,7 +9,8 @@ Use this repository to run and evolve a toio behavior skill project.
 
 ## Core Runtime
 
-- Start runtime with `python app.py`.
+- Start runtime with `python main.py` (recommended).
+- `python app.py` is kept as a compatibility entrypoint.
 - Runtime listens for:
   - Keyboard states: `0-6`
   - External commands written via `python set_state.py <state> "<desc>"`
@@ -31,7 +32,7 @@ Use this repository to run and evolve a toio behavior skill project.
 - After changes, run:
 
 ```bash
-python -m py_compile app.py set_state.py scripts/set_state.py toio_app/*.py
+python -m py_compile main.py app.py set_state.py scripts/set_state.py toio_app/*.py
 ```
 
 - Validate behavior:

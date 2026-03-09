@@ -1,13 +1,8 @@
-# 文件说明（中文）：项目入口文件，负责启动异步主流程。
-# File Description (EN): Project entry point; starts the async main flow.
+# 文件说明（中文）：兼容入口，推荐改用 main.py。
+# File Description (EN): Compatibility entrypoint; prefer using main.py.
 
-import asyncio
-
-from toio_app import run
+from main import main
 
 
 if __name__ == "__main__":
-    try:
-        asyncio.run(run())
-    except KeyboardInterrupt:
-        print("\n[EXIT] Interrupted by user.")
+    raise SystemExit(main())
